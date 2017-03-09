@@ -1,0 +1,27 @@
+
+{
+  "title": "Hello world",
+  "description": "Example H5P content type for getting started",
+  "majorVersion": 1,
+  "minorVersion": 0,
+  "patchVersion": 0,
+  "runnable": 1,
+  "author": "Tom Arild Jakobsen <tom.arild.jakobsen@joubel.com>",
+  "license": "MIT",
+  "machineName": "H5P.HelloWorld",
+  "embedTypes": [
+    "iframe"
+  ],
+  "preloadedJs": [
+    {
+      "path": "dist/dist.js"
+    }
+  ],
+  "preloadedCss": [
+    {
+      "path": "dist/dist.css"
+    }
+  ],
+  "preloadedDependencies": [],
+  "editorDependencies": []
+}

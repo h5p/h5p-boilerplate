@@ -1,0 +1,47 @@
+{
+  "name": "h5p-hello-world",
+  "version": "1.0.0",
+  "description": "Example H5P Content Type for getting started",
+  "private": true,
+  "scripts": {
+    "test": "karma start",
+    "build": "webpack",
+    "watch": "webpack --watch",
+    "dev": "lite-server"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/h5p/h5p-hello-world.git"
+  },
+  "keywords": [
+    "feedback",
+    "h5p",
+    "library"
+  ],
+  "author": "Tom Arild Jakobsen <tom.arild.jakobsen@joubel.com>",
+  "license": "MIT",
+  "devDependencies": {
+    "babel-cli": "^6.23.0",
+    "babel-core": "^6.23.1",
+    "babel-loader": "^6.3.2",
+    "babel-plugin-transform-object-assign": "^6.22.0",
+    "babel-preset-latest": "^6.22.0",
+    "browsersync": "0.0.1-security",
+    "css-loader": "^0.26.2",
+    "extract-text-webpack-plugin": "^2.0.0",
+    "file-loader": "^0.10.1",
+    "jasmine-core": "^2.4.1",
+    "karma": "^1.1.2",
+    "karma-chrome-launcher": "^2.0.0",
+    "karma-firefox-launcher": "^1.0.0",
+    "karma-jasmine": "^1.0.2",
+    "lite-server": "^2.2.2",
+    "node-sass": "^4.5.0",
+    "sass-loader": "^6.0.2",
+    "style-loader": "^0.13.2",
+    "url-loader": "^0.5.8",
+    "webpack": "^2.2.1"
+  },
+  "dependencies": {
+  }
+}
