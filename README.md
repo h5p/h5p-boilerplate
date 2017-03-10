@@ -1,4 +1,4 @@
-# H5P Hello World
+# H5P Boilerplate
 
 ## Getting started
 
