@@ -1,4 +1,4 @@
-require('../../src/styles/main.scss');
+require('../styles/main.scss');
 
 // Load library
 H5P = H5P || {};

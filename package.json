@@ -1,5 +1,5 @@
 {
-  "name": "h5p-hello-world",
+  "name": "h5p-boilerplate",
   "version": "1.0.0",
   "description": "Example H5P Content Type for getting started",
   "private": true,
@@ -11,10 +11,9 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/h5p/h5p-hello-world.git"
+    "url": "git+https://github.com/h5p/h5p-boilerplate.git"
   },
   "keywords": [
-    "feedback",
     "h5p",
     "library"
   ],
