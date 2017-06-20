@@ -1,4 +1,3 @@
-
 {
   "title": "Hello world",
   "description": "Example H5P content type for getting started",
@@ -6,7 +5,7 @@
   "minorVersion": 0,
   "patchVersion": 0,
   "runnable": 1,
-  "author": "Tom Arild Jakobsen <tom.arild.jakobsen@joubel.com>",
+  "author": "Joubel",
   "license": "MIT",
   "machineName": "H5P.HelloWorld",
   "embedTypes": [
@@ -17,11 +16,7 @@
       "path": "dist/dist.js"
     }
   ],
-  "preloadedCss": [
-    {
-      "path": "dist/dist.css"
-    }
-  ],
+  "preloadedCss": [],
   "preloadedDependencies": [],
   "editorDependencies": []
 }

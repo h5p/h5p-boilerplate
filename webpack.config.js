@@ -1,48 +1,33 @@
 var path = require('path');
-const ExtractTextPlugin = require("extract-text-webpack-plugin");
+var nodeEnv = process.env.NODE_ENV || 'development';
+var isDev = (nodeEnv !== 'production');
 
-const extractSass = new ExtractTextPlugin({
-  filename: "dist.css"
-});
-
-
-const config = {
-  entry: "./src/entries/dist.js",
-  devtool: 'inline-source-map',
-  output: {
-    path: path.join(__dirname, 'dist'),
-    filename: "dist.js",
-    sourceMapFilename: '[file].map'
+var config = {
+  entry: {
+    dist: './src/entries/dist.js'
   },
-  resolve: {
-    modules: [
-      path.resolve('./src'),
-      path.resolve('./node_modules'),
-    ]
+  output: {
+    path: path.resolve(__dirname, 'dist'),
+    filename: '[name].js'
   },
   module: {
     rules: [
       {
-        test: /\.(js|jsx)$/,
-        use: 'babel-loader'
+        test: /\.js$/,
+        include: path.resolve(__dirname, 'src'),
+        loader: 'babel-loader'
       },
       {
-        test: /\.scss$/,
-        use: extractSass.extract({
-          use: [{
-            loader: "css-loader?sourceMap"
-          }, {
-            loader: "sass-loader?outputStyle=expanded&sourceMap=true&sourceMapContents=true"
-          }],
-
-          fallback: "style-loader"
-        })
+        test: /\.css$/,
+        include: path.resolve(__dirname, 'src'),
+        use: ['style-loader', 'css-loader']
       }
     ]
-  },
-  plugins: [
-    extractSass
-  ]
+  }
 };
+
+if (isDev) {
+  config.devtool = 'inline-source-map';
+}
 
 module.exports = config;
