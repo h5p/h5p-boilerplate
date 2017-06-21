@@ -19,12 +19,3 @@ Run tests:
 ```bash
 npm test
 ```
-
-## Running local dev environment
-
-Make sure that submodules are updated and submodule content is imported.
-Then you can spin up the local dev environment using webpack dev server:
-
-```bash
-npm run dev
-```
