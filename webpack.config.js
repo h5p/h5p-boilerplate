@@ -1,28 +1,66 @@
-var path = require('path');
-var nodeEnv = process.env.NODE_ENV || 'development';
-var isDev = (nodeEnv !== 'production');
+const path = require('path');
+const webpack = require('webpack');
+const UglifyJsPlugin = require("uglifyjs-webpack-plugin");
+const MiniCssExtractPlugin = require("mini-css-extract-plugin");
+const OptimizeCSSAssetsPlugin = require("optimize-css-assets-webpack-plugin");
 
-var config = {
+const nodeEnv = process.env.NODE_ENV || 'development';
+const isDev = (nodeEnv !== 'production');
+
+const config = {
+  mode: 'development',
+  optimization: {
+    minimizer: [
+      new UglifyJsPlugin({
+        cache: true,
+        parallel: true,
+        sourceMap: isDev
+      }),
+      new OptimizeCSSAssetsPlugin({})
+    ]
+  },
+  plugins: [
+    new MiniCssExtractPlugin({
+      filename: 'h5p-hello-world.css'
+    })
+  ],
   entry: {
-    dist: './src/entries/dist.js'
+    dist: './src/entries/h5p-hello-world.js'
   },
   output: {
-    path: path.resolve(__dirname, 'dist'),
-    filename: '[name].js'
+    filename: 'h5p-hello-world.js',
+    path: path.resolve(__dirname, 'dist')
   },
   module: {
     rules: [
       {
         test: /\.js$/,
-        include: path.resolve(__dirname, 'src'),
-        loader: 'babel-loader'
+        loader: 'babel-loader',
+        query: {
+          presets: ['@babel/env']
+        }
       },
       {
         test: /\.css$/,
-        include: path.resolve(__dirname, 'src'),
-        use: ['style-loader', 'css-loader']
+        use: [
+          MiniCssExtractPlugin.loader,
+          'css-loader'
+        ],
+      },
+      {
+        test: /\.svg|\.jpg|\.png$/,
+        include: path.join(__dirname, 'src/images'),
+        loader: 'file-loader?name=images/[name].[ext]'
+      },
+      {
+        test: /\.woff$/,
+        include: path.join(__dirname, 'src/fonts'),
+        loader: 'file-loader?name=fonts/[name].[ext]'
       }
     ]
+  },
+  stats: {
+    colors: true
   }
 };
 

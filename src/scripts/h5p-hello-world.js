@@ -17,7 +17,7 @@ export default class HelloWorld extends H5P.EventDispatcher {
      *
      * @param {jQuery} $wrapper
      */
-    this.attach = function($wrapper) {
+    this.attach = function ($wrapper) {
       $wrapper.get(0).classList.add('h5p-hello-world');
       $wrapper.get(0).appendChild(this.element);
     };

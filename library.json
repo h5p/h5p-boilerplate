@@ -13,7 +13,7 @@
   ],
   "preloadedJs": [
     {
-      "path": "dist/dist.js"
+      "path": "dist/h5p-hello-world.js"
     }
   ],
   "preloadedCss": [],
