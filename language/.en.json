@@ -1,0 +1,39 @@
+{
+  "semantics": [
+    {
+      "label": "Text",
+      "placeholder": "Hello world",
+      "default": "Hello %username",
+      "description": "Says hello to someone"
+    },
+    {
+      "label": "Behavioural settings",
+      "description": "These options will let you control how the task behaves.",
+      "fields": [
+        {
+          "label": "Enable \"Retry\""
+        },
+        {
+          "label": "Enable \"Solution\""
+        }
+      ]
+    },
+    {
+      "label": "User interface",
+      "fields": [
+        {
+          "label": "Text for \"Check\" button",
+          "default": "Check"
+        },
+        {
+          "label": "Text for \"Retry\" button",
+          "default": "Retry"
+        },
+        {
+          "label": "Text for \"Show solution\" button",
+          "default": "Show solution"
+        }
+      ]
+    }
+  ]
+}
