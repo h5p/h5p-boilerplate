@@ -21,6 +21,17 @@
       "path": "dist/h5p-hello-world.css"
     }
   ],
-  "preloadedDependencies": [],
+  "preloadedDependencies": [
+    {
+      "machineName": "H5P.Question",
+      "majorVersion": 1,
+      "minorVersion": 4
+    },
+    {
+      "machineName": "H5P.JoubelUI",
+      "majorVersion": 1,
+      "minorVersion": 3
+    }
+  ],
   "editorDependencies": []
 }
