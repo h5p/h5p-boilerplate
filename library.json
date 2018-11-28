@@ -16,7 +16,11 @@
       "path": "dist/h5p-hello-world.js"
     }
   ],
-  "preloadedCss": [],
+  "preloadedCss": [
+    {
+      "path": "dist/h5p-hello-world.css"
+    }
+  ],
   "preloadedDependencies": [],
   "editorDependencies": []
 }
