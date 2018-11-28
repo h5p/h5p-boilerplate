@@ -7,6 +7,7 @@ import HelloWorldContent from './h5p-hello-world-content';
  * - Extends H5P.Question which offers functions for setting the DOM
  * - Implements the question type contract necessary for reporting and for
  *   making the content type usable in compound content types like Question Set
+ *   Cpm. https://h5p.org/documentation/developers/contracts
  * - Implements getCurrentState to allow continuing a user's previous session
  * - Uses a separate content class to organitze files
  */
