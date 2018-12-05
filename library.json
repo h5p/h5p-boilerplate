@@ -20,7 +20,5 @@
     {
       "path": "dist/h5p-hello-world.css"
     }
-  ],
-  "preloadedDependencies": [],
-  "editorDependencies": []
+  ]
 }
