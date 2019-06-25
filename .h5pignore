@@ -4,6 +4,7 @@ reports
 tests
 dev
 src
+.eslintrc.json
 .idea
 .git
 .babelrc
@@ -17,3 +18,4 @@ README.md
 CONTRIBUTING.md
 package.json
 worknotes
+LICENSE
