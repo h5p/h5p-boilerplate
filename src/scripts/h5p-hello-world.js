@@ -34,7 +34,7 @@ export default class HelloWorld extends H5P.Question {
      */
 
     // Make sure all variables are set
-    extend({
+    this.params = extend({
       behaviour: {
         enableSolutionsButton: true,
         enableRetry: true
