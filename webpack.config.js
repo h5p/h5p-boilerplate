@@ -1,7 +1,7 @@
 const path = require('path');
 const webpack = require('webpack');
-const UglifyJsPlugin = require("uglifyjs-webpack-plugin");
 const MiniCssExtractPlugin = require("mini-css-extract-plugin");
+const MinifyPlugin = require("babel-minify-webpack-plugin");
 const OptimizeCSSAssetsPlugin = require("optimize-css-assets-webpack-plugin");
 
 const nodeEnv = process.env.NODE_ENV || 'development';
@@ -11,17 +11,15 @@ const config = {
   mode: 'development',
   optimization: {
     minimizer: [
-      new UglifyJsPlugin({
-        cache: true,
-        parallel: true,
-        sourceMap: isDev
-      }),
       new OptimizeCSSAssetsPlugin({})
     ]
   },
   plugins: [
     new MiniCssExtractPlugin({
       filename: 'h5p-hello-world.css'
+    }),
+    new MinifyPlugin({}, {
+      sourceMap: isDev
     })
   ],
   entry: {
@@ -63,9 +61,5 @@ const config = {
     colors: true
   }
 };
-
-if (isDev) {
-  config.devtool = 'inline-source-map';
-}
 
 module.exports = config;
