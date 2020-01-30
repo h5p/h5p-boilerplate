@@ -62,4 +62,8 @@ const config = {
   }
 };
 
+if (isDev) {
+  config.devtool = 'cheap-module-eval-source-map';
+}
+
 module.exports = config;
