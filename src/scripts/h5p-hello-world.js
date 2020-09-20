@@ -8,7 +8,7 @@ export default class HelloWorld extends H5P.EventDispatcher {
    */
   constructor(params, contentId, extras = {}) {
     super();
-    let username = H5PIntegration.user.name || 'world';
+    let username = H5PIntegration && H5PIntegration.user && H5PIntegration.user.name || 'world';
     this.element = document.createElement('div');
     this.element.innerText = params.textField.replace('%username', username);
 
