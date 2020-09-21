@@ -55,7 +55,7 @@ export default class HelloWorld extends H5P.Question {
     this.registerDomElements = () => {
       const content = new HelloWorldContent(
         params.textField, // Parameter from editor
-        H5PIntegration.user.name, // Try to retrieve user name from host system,
+        (H5PIntegration && H5PIntegration.user) ? H5PIntegration.user.name : 'Unknown', // Try to retrieve user name from host system,
         this.previousState.random // previous session state
       );
 
