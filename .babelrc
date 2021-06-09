@@ -3,6 +3,7 @@
   "plugins": [
     ["@babel/plugin-transform-classes", {
       "loose": true
-    }]
+    }],
+    ["@babel/plugin-transform-destructuring"]
   ]
 }
