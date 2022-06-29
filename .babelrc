@@ -1,8 +1,11 @@
 {
   "presets": ["@babel/preset-env"],
   "plugins": [
-    ["@babel/plugin-transform-classes", {
-      "loose": true
-    }]
+    [
+      "@babel/plugin-transform-classes",
+      {
+        "loose": true
+      }
+    ]
   ]
 }
