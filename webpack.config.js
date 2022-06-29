@@ -13,7 +13,7 @@ const config = {
   entry: {
     dist: `/entries/${libraryName}.js`
   },
-  devtool: isDev ? 'inline-source-map' : undefined,
+  devtool: isDev ? 'eval-source-map' : undefined,
   optimization: {
     minimizer: [
       new OptimizeCSSAssetsPlugin({})
