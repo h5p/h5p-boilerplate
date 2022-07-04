@@ -5,7 +5,7 @@
   "private": true,
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "build": "cross-env NODE_ENV=production ./node_modules/.bin/webpack -p",
+    "build": "cross-env NODE_ENV=production ./node_modules/.bin/webpack",
     "watch": "./node_modules/.bin/webpack --watch"
   },
   "repository": {
@@ -19,18 +19,19 @@
   "author": "Joubel",
   "license": "MIT",
   "devDependencies": {
-    "@babel/cli": "^7.12.8",
-    "@babel/core": "^7.12.9",
-    "@babel/preset-env": "^7.12.7",
-    "babel-loader": "^8.2.2",
-    "babel-minify-webpack-plugin": "^0.3.1",
-    "cross-env": "^5.2.1",
-    "css-loader": "^1.0.1",
-    "file-loader": "^2.0.0",
-    "mini-css-extract-plugin": "^0.4.4",
-    "optimize-css-assets-webpack-plugin": "^5.0.4",
-    "resolve-url-loader": "^3.1.2",
-    "webpack": "^4.44.2",
-    "webpack-cli": "^3.3.12"
+    "@babel/cli": "^7.17.6",
+    "@babel/core": "^7.17.8",
+    "@babel/plugin-transform-destructuring": "^7.17.7",
+    "@babel/preset-env": "^7.16.11",
+    "babel-loader": "^8.2.4",
+    "cross-env": "^7.0.3",
+    "css-loader": "^6.7.1",
+    "mini-css-extract-plugin": "^2.6.0",
+    "regenerator-runtime": "^0.13.9",
+    "resolve-url-loader": "^5.0.0",
+    "sass": "^1.49.9",
+    "sass-loader": "^12.6.0",
+    "webpack": "^5.70.0",
+    "webpack-cli": "^4.9.2"
   }
 }
