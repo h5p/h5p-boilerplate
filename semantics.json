@@ -1,66 +1,98 @@
 [
   {
-    "label": "Text",
-    "importance": "high",
-    "name": "textField",
+    "name": "media",
+    "type": "group",
+    "label": "Media",
+    "importance": "medium",
+    "fields": [
+      {
+        "name": "type",
+        "type": "library",
+        "label": "Type",
+        "options": [
+          "H5P.Image 1.1",
+          "H5P.Video 1.6",
+          "H5P.Audio 1.5"
+        ],
+        "optional": true,
+        "description": "Optional media to display above the question."
+      }
+    ]
+  },
+  {
+    "label": "Task description",
+    "name": "taskDescription",
     "type": "text",
-    "placeholder": "Hello world",
-    "default": "Hello %username",
-    "description": "Says hello to someone"
+    "default": "Please enter a greeting",
+    "description": "Describe what the user should do"
+  },
+  {
+    "label": "Accepted greetings",
+    "name": "acceptedAnswers",
+    "type": "text",
+    "widget": "textarea",
+    "description": "Enter valid greetings, one per line",
+    "default": "Hello\nHi\nHey"
   },
   {
     "name": "behaviour",
     "type": "group",
     "label": "Behavioural settings",
-    "importance": "low",
-    "description": "These options will let you control how the task behaves.",
     "fields": [
       {
-        "name": "enableRetry",
-        "label": "Enable \"Retry\"",
+        "name": "enableSolutionsButton",
         "type": "boolean",
-        "importance": "low",
-        "default": true,
-        "optional": true
+        "label": "Enable \"Show solution\" button",
+        "default": true
       },
       {
-        "name": "enableSolutionsButton",
-        "label": "Enable \"Solution\"",
+        "name": "enableRetry",
         "type": "boolean",
-        "importance": "low",
-        "default": true,
-        "optional": true
+        "label": "Enable \"Retry\" button",
+        "default": true
       }
     ]
   },
   {
-    "name": "l10n",
-    "type": "group",
-    "common": true,
-    "label": "User interface",
-    "importance": "low",
-    "fields": [
-      {
-        "name": "checkAnswer",
-        "type": "text",
-        "label": "Text for \"Check\" button",
-        "importance": "low",
-        "default": "Check"
-      },
-      {
-        "name": "tryAgain",
-        "label": "Text for \"Retry\" button",
-        "type": "text",
-        "importance": "low",
-        "default": "Retry"
-      },
-      {
-        "name": "showSolution",
-        "type": "text",
-        "label": "Text for \"Show solution\" button",
-        "importance": "low",
-        "default": "Show solution"
-      }
-    ]
+    "name": "checkAnswer",
+    "type": "text",
+    "label": "Check button text",
+    "default": "Check",
+    "common": true
+  },
+  {
+    "name": "showSolution",
+    "type": "text",
+    "label": "Show solution button text",
+    "default": "Show solution",
+    "common": true
+  },
+  {
+    "name": "tryAgain",
+    "type": "text",
+    "label": "Retry button text",
+    "default": "Retry",
+    "common": true
+  },
+  {
+    "name": "inputPlaceholder",
+    "type": "text",
+    "label": "Input field placeholder",
+    "default": "Type your greeting here",
+    "common": true
+  },
+  {
+    "name": "correctAnswerText",
+    "type": "text",
+    "label": "Solution text",
+    "default": "Accepted greetings are:",
+    "common": true
+  },
+  {
+    "name": "incorrectAnswerText",
+    "type": "text",
+    "label": "Incorrect answer text",
+    "default": "That wasn't a valid greeting",
+    "common": true
   }
 ]

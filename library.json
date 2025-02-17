@@ -25,7 +25,12 @@
     {
       "machineName": "H5P.Question",
       "majorVersion": 1,
-      "minorVersion": 4
+      "minorVersion": 5
+    },
+    {
+      "machineName": "H5P.JoubelUI",
+      "majorVersion": 1,
+      "minorVersion": 3
     }
   ]
 }

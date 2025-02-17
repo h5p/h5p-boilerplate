@@ -1,3 +1,83 @@
 .h5p-hello-world {
-  color: blue;
+  position: relative;
 }
+
+.h5p-hello-world .h5p-hello-world-component {
+  font-family: var(--h5p-font-family);
+  font-size: var(--h5p-font-size);
+  color: var(--h5p-text-color);
+  padding: 1em;
+}
+
+.h5p-hello-world .h5p-input-wrapper {
+  display: inline-block;
+  position: relative;
+}
+
+.h5p-hello-world .h5p-text-input {
+  font-family: H5PDroidSans, sans-serif;
+  font-size: 1em;
+  border-radius: 0.25em;
+  border: 1px solid #a0a0a0;
+  padding: 0.1875em 1em 0.1875em 0.5em;
+  text-overflow: ellipsis;
+  overflow: hidden;
+  white-space: nowrap;
+}
+
+.h5p-hello-world .h5p-text-input:focus {
+  outline: none;
+  box-shadow: 0 0 0.5em 0 #6391CA;
+  border-color: #6391CA;
+}
+
+.h5p-hello-world .h5p-text-input:disabled {
+  opacity: 1;
+}
+
+/* Correctly answered input */
+.h5p-hello-world .h5p-correct .h5p-text-input {
+  background: #9dd8bb;
+  border: 1px solid #9dd8bb;
+  color: #255c41;
+}
+
+.h5p-hello-world .h5p-correct:after {
+  position: absolute;
+  right: 0.5em;
+  top: 0;
+  text-decoration: none;
+  content: "\f00c";
+  font-family: 'H5PFontAwesome4';
+  color: #255c41;
+}
+
+/* Wrongly answered input */
+.h5p-hello-world .h5p-wrong .h5p-text-input {
+  background-color: #f7d0d0;
+  border: 1px solid #f7d0d0;
+  color: #b71c1c;
+  text-decoration: line-through;
+}
+
+.h5p-hello-world .h5p-wrong:after {
+  position: absolute;
+  right: 0.5em;
+  top: 0;
+  font-family: 'H5PFontAwesome4';
+  text-decoration: none;
+  content: "\f00d";
+  color: #b71c1c;
+}
+
+/* Solution text */
+.h5p-hello-world .h5p-solution-text {
+  color: #255c41;
+  font-weight: bold;
+  border: 1px #255c41 dashed;
+  background-color: #d4f6e6;
+  padding: 0.15em;
+  border-radius: 0.25em;
+  margin-left: .5em;
+}
+

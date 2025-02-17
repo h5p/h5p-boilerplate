@@ -1,39 +1,58 @@
 {
   "semantics": [
     {
-      "label": "Text",
-      "placeholder": "Hello world",
-      "default": "Hello %username",
-      "description": "Says hello to someone"
+      "label": "Media",
+      "fields": [
+        {
+          "label": "Type",
+          "description": "Optional media to display above the question."
+        }
+      ]
+    },
+    {
+      "label": "Task description",
+      "default": "Please enter a greeting",
+      "description": "Describe what the user should do"
+    },
+    {
+      "label": "Accepted greetings",
+      "description": "Enter valid greetings, one per line",
+      "default": "Hello\nHi\nHey"
     },
     {
       "label": "Behavioural settings",
-      "description": "These options will let you control how the task behaves.",
       "fields": [
         {
-          "label": "Enable \"Retry\""
+          "label": "Enable \"Show solution\" button"
         },
         {
-          "label": "Enable \"Solution\""
+          "label": "Enable \"Retry\" button"
         }
       ]
     },
     {
-      "label": "User interface",
-      "fields": [
-        {
-          "label": "Text for \"Check\" button",
-          "default": "Check"
-        },
-        {
-          "label": "Text for \"Retry\" button",
-          "default": "Retry"
-        },
-        {
-          "label": "Text for \"Show solution\" button",
-          "default": "Show solution"
-        }
-      ]
+      "label": "Check button text",
+      "default": "Check"
+    },
+    {
+      "label": "Show solution button text",
+      "default": "Show solution"
+    },
+    {
+      "label": "Retry button text",
+      "default": "Retry"
+    },
+    {
+      "label": "Input field placeholder",
+      "default": "Type your greeting here"
+    },
+    {
+      "label": "Solution text",
+      "default": "Accepted greetings are:"
+    },
+    {
+      "label": "Incorrect answer text",
+      "default": "That wasn't a valid greeting"
     }
   ]
 }

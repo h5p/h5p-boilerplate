@@ -1,6 +1,7 @@
 const path = require('path');
 const MiniCssExtractPlugin = require("mini-css-extract-plugin");
 const TerserPlugin = require('terser-webpack-plugin');
+const { VueLoaderPlugin } = require('vue-loader');
 
 const nodeEnv = process.env.NODE_ENV || 'development';
 const isProd = (nodeEnv === 'production');
@@ -13,7 +14,7 @@ module.exports = {
       new TerserPlugin({
         terserOptions: {
           compress:{
-            drop_console: true,
+            drop_console: false,
           }
         }
       }),
@@ -22,7 +23,8 @@ module.exports = {
   plugins: [
     new MiniCssExtractPlugin({
       filename: 'h5p-hello-world.css'
-    })
+    }),
+    new VueLoaderPlugin()
   ],
   entry: {
     dist: './src/entries/h5p-hello-world.js'
@@ -34,6 +36,10 @@ module.exports = {
   target: ['web', 'es5'], // IE11
   module: {
     rules: [
+      {
+        test: /\.vue$/,
+        loader: 'vue-loader'
+      },
       {
         test: /\.js$/,
         exclude: /node_modules/,
